@@ -1,0 +1,72 @@
+PASO A SEGUIR PARA INSTALAR Y EJECUTAR EL PROYECTO desarrollado con Django
+
+Requisitos Previos
+
+Antes de comenzar, asegúrate de tener instalado:
+* Python 3.x
+* Django
+* pip (gestor de paquetes de Python)
+* venv (módulo para entornos virtuales)
+* Instalación de algunas extensiones (SQLite Viewer).
+
+Pasos:
+
+1) Creamos una carpeta con el nombre del proyecto y la abrimos con visualStudio Code
+
+2)creamos un entorno virtual 
+C:\Users\Diana\Desktop\django blog> python -m venv env
+
+3) luego activamos el entorno virtual
+
+* env\Scripts\activate    
+(env) PS C:\Users\Diana\Desktop\django blog>
+
+4) luego comprobamos si tenemos instalado python
+* python --version
+  Python 3.13.2
+
+5) verificamos también el pip
+* pip --version
+pip 24.3.1 from C:\Users\Diana\Desktop\django blog\env\Lib\site-packages\pip (python 3.13)
+
+6) comprobamos si tenemos instalado Django
+* python -m django --version
+ 6.0.2
+
+7) Ya podemos crear nuestro proyecto con django y darle el nombre que queramos 
+*django admin startproject mysite .... y me crea la carpeta con mysite y 5 archivos importantes
+
+8) ingresar en mysite y levantamos el servidor para trabajar 
+* cd mysite
+(env) PS C:\Users\Diana\Desktop\django blog\mysite>
+
+9) ahora levantamos el servidor
+* python manage.py runserver
+luego nos dice que tenemos que hacer migraciones
+y ya podemos dar clic en la pagina que me ha creado la pagina e ir haciendo cambios y verlos en el momento
+Django version 6.0.2, using settings 'mysite.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
+
+
+10)luego debemos crear el archivo views.py, dentro de el archivo hacemos una vista
+
+11) creamos una aplicación y el nombre que le queremos dar.
+*Python manage.py startapp blog 
+
+12)luego creamos el archivo urls.py dentro de la carpeta blog
+13)creamos una carpeta templates a la altura de las otras carpetas y dentro otra carpeta blog y dentro un archivos html que vayanmos a utilizar.
+
+14)ahora haremos la primera migracion de la aplicación.
+* python manage.py  makemigrations blog y se me crea un archivo (0001_initial.py)
+15)Luego hacemos la migración general
+* python manage.py migrate
+16)Luego abrimos la consola interactiva 
+*python manage.py shell
+>>> 
+17)creamos un superadmin
+* python manage.py createsuperuser,creamos usuario(user) y una contraseña(user) y un  correo(user@gmail.com).
+
+
+
+
